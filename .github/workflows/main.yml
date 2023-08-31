@@ -50,7 +50,10 @@ jobs:
       #     cmake --build build   
       - name: Build binary
         run: |
+          echo "current path"
+          pwd
           ls /home/runner/work/iot-central-firmware/iot-central-firmware/iotz
+          cd /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container
           /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container/build.sh
           docker info
           # npm i iotz -g
