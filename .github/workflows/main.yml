@@ -2,7 +2,9 @@ name: build
 
 on:
   workflow_dispatch:
- 
+  push:
+    branches:
+      - main  # Trigger on push to 'main' branch
 
 defaults:
   run:
@@ -25,13 +27,22 @@ jobs:
         with:
           submodules: recursive
 
-      - name: arm-none-eabi-gcc
-        uses: ryanwinter/arm-none-eabi-gcc@master
-        with:
-          release: '10-2021.10'
+      # - name: arm-none-eabi-gcc
+      #   uses: ryanwinter/arm-none-eabi-gcc@master
+      #   with:
+      #     release: '10-2021.10'
 
-      - name: Install Ninja
-        uses: seanmiddleditch/gha-setup-ninja@v3
+      # - name: Install Ninja
+      #   uses: seanmiddleditch/gha-setup-ninja@v3
+
+      - name: Checkout iotz
+        uses: actions/checkout@v2
+        with:
+          repository: 'obastemur/iotz'
+          path: 'iotz'
+          #submodules: recursive
+        
+      
 
       # - name: Build binary
       #   run: |
@@ -39,6 +50,7 @@ jobs:
       #     cmake --build build   
       - name: Build binary
         run: |
+          ls iotz
           docker info
           # npm i iotz -g
           # iotz update
