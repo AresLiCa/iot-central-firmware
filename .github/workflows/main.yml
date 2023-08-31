@@ -38,7 +38,7 @@ jobs:
       - name: Checkout iotz
         uses: actions/checkout@v2
         with:
-          repository: 'obastemur/iotz'
+          repository: 'AresLiCa/iotz'
           path: 'iotz'
           #submodules: recursive
         
@@ -56,6 +56,7 @@ jobs:
           cd /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container
           /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container/build.sh
           docker info
+          docker images
           # npm i iotz -g
           # iotz update
           # #iotz init
