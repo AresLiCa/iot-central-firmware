@@ -51,6 +51,7 @@ jobs:
       - name: Build binary
         run: |
           ls /home/runner/work/iot-central-firmware/iot-central-firmware/iotz
+          /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container/build.sh
           docker info
           # npm i iotz -g
           # iotz update
