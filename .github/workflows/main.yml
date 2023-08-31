@@ -58,7 +58,7 @@ jobs:
           docker info
           docker images
           npm i iotz -g
-          iotz update
+          #iotz update
           # #iotz init
           iotz --version
       #     cmake --build build   
