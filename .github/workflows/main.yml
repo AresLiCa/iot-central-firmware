@@ -39,10 +39,11 @@ jobs:
       #     cmake --build build   
       - name: Build binary
         run: |
-          npm i iotz -g
-          iotz update
-          #iotz init
-          iotz --version
+          docker info
+          # npm i iotz -g
+          # iotz update
+          # #iotz init
+          # iotz --version
       #     cmake --build build   
       
 
