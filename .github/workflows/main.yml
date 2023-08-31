@@ -35,12 +35,12 @@ jobs:
       # - name: Install Ninja
       #   uses: seanmiddleditch/gha-setup-ninja@v3
 
-      - name: Checkout iotz
-        uses: actions/checkout@v2
-        with:
-          repository: 'AresLiCa/iotz'
-          path: 'iotz'
-          #submodules: recursive
+      # - name: Checkout iotz
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: 'AresLiCa/iotz'
+      #     path: 'iotz'
+      #     #submodules: recursive
         
       
 
@@ -52,15 +52,18 @@ jobs:
         run: |
           echo "current path"
           pwd
-          ls /home/runner/work/iot-central-firmware/iot-central-firmware/iotz
-          cd /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container
-          /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container/build.sh
+          # ls /home/runner/work/iot-central-firmware/iot-central-firmware/iotz
+          # cd /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container
+          # /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container/build.sh
           docker info
           docker images
           npm i iotz -g
           #iotz update
-          # #iotz init
-          iotz --version
+          iotz init
+          iotz compile
+          #iotz --version
+          cd /home/runner/work/iot-central-firmware/iot-central-firmware/MXCHIP/mxchip_advanced
+          
       #     cmake --build build   
       
 
