@@ -6,7 +6,7 @@ on:
 
 defaults:
   run:
-    working-directory: MXCHIP\mxchip_advanced
+    working-directory: MXCHIP/mxchip_advanced
 
 jobs:
   build:
