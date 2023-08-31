@@ -41,7 +41,8 @@ jobs:
         run: |
           npm i iotz -g
           iotz update
-          iotz init
+          #iotz init
+          iotz --version
       #     cmake --build build   
       
 
