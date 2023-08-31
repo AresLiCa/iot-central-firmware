@@ -57,10 +57,10 @@ jobs:
           /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container/build.sh
           docker info
           docker images
-          # npm i iotz -g
-          # iotz update
+          npm i iotz -g
+          iotz update
           # #iotz init
-          # iotz --version
+          iotz --version
       #     cmake --build build   
       
 
