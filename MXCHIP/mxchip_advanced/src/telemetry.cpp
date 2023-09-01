@@ -203,7 +203,7 @@ void TelemetryController::loop() {
             char buff[STRING_BUFFER_128] = {0};
             snprintf(buff, STRING_BUFFER_128 - 1,
                     "%s\r\nsent: %d\r\nfail: %d\r\ntwin: %d/%d",
-                    "-- Connected --",
+                    "-- Hello!~ --",
                     StatsController::getTelemetryCount(),
                     StatsController::getErrorCount(),
                     StatsController::getDesiredCount(),
