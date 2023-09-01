@@ -53,8 +53,8 @@ jobs:
           echo "current path"
           pwd
           # ls /home/runner/work/iot-central-firmware/iot-central-firmware/iotz
-          # cd /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container
-          # /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container/build.sh
+          cd /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container
+          /home/runner/work/iot-central-firmware/iot-central-firmware/iotz/iotc_base_container/build.sh
           docker info
           docker images
           npm i iotz -g
